@@ -36,9 +36,16 @@
     <!-- initial slide -->
     <div class="slide" id="i0">
       <p class="left">
-        You will read some sentences. These are sentences from transcriptions of real conversations real people had over the phone. <strong>Your task is to answer a question about the red sentence to the best of your ability.</strong><br>
+        During this experiment you will alternate back and forth between two tasks:
         <br>
-        The experiment will take approximately 10 minutes. Let's start with two examples!
+        <br>
+        Half of the time you will be prompted with an arithmetic equation. <strong>Your task is to find and provide the answer to the provided equation to the best of your ability. You will be paid even if you make math mistakes and you may use a pen and paper to help. However, please DO NOT use a calculator. </strong>
+        <br>
+        <br>
+        The other half of the time you will be prompted with a sentence that has been cut short. For example "The student was absent from school because she _____ ." <strong> Your task is to fill in the blank to complete the provided sentence.</strong>
+        <br>
+        <br>
+        The experiment will take approximately 30 minutes.
       </p><button id="start_button" type="button">Start experiment</button>
       <p class="left legal">
         <strong><br>
@@ -232,83 +239,41 @@
       <!-- <p class="case" style="text-align: left;"></p> -->
 
       <!-- placeholders for stimuli -->
-      <p class="originalSen" id="trial-originalSen">
-        {{original sentence}}
-      </p>
-      <p class="targetSen" id="trial-targetSen">
-        {{target sentence}}
-      </p>
-      <div class="instruction">
-        <i>How similar is the statement in blue (with 'but not all') to the statement in red (without 'but not all')?</i>
+      <div id = "prime">
+        <div class="instruction">
+          <i>Please provide the answer to the following equation</i>
+        </div>
+        <div class = "prime_image">
+        </div>
+        <input type = "text" id = "math_answer">
+        <div class="center">
+          <button class="continueButton" onclick="_s.button2()">Continue</button>
+        </div>
       </div>
-      <table class="likertscale">
-        <tr>
-          <td>
-            very different meaning
-          </td>
-          <td>
-            <input type="radio" name="number" value="1">
-          </td>
-          <td>
-            <input type="radio" name="number" value="2">
-          </td>
-          <td>
-            <input type="radio" name="number" value="3">
-          </td>
-          <td>
-            <input type="radio" name="number" value="4">
-          </td>
-          <td>
-            <input type="radio" name="number" value="5">
-          </td>
-          <td>
-            <input type="radio" name="number" value="6">
-          </td>
-          <td>
-            <input type="radio" name="number" value="7">
-          </td>
-          <td>
-            same meaning
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            1
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            3
-          </td>
-          <td>
-            4
-          </td>
-          <td>
-            5
-          </td>
-          <td>
-            6
-          </td>
-          <td>
-            7
-          </td>
-          <td></td>
-        </tr>
-      </table><br>
-      <br>
-      The blue sentence sounds strange: <input type="checkbox" id="check-strange"><br>
-      <br>
-      <div class="center">
-        <button class="continueButton" onclick="_s.button()">Continue</button>
-      </div>
-      <div class="err">
+      <div class="err1">
         <br>
         <p>
-          Make sure you selected a radio button before clicking 'Continue'
+          Make sure you have entered an answer before hitting the 'Continue' button.
         </p>
       </div>
+      <div id = "target">
+        <div class="instruction">
+          <i>Please fill in the blank to complete the sentence.</i>
+        </div>
+        <div class = "target_sentence">
+        </div>
+        <input type = "text" id = "sentence_completion">
+        <div class="center">
+          <button class="continueButton" onclick="_s.button()">Continue</button>
+        </div>
+      </div>
+      <div class="err2">
+        <br>
+        <p>
+          Make sure you have completed the sentence before hitting the 'Continue' button.
+        </p>
+      </div>
+
     </div>
 
     <!-- subject information slide -->
