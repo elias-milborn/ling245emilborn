@@ -22,7 +22,7 @@ var filler_sentences = [
   "The priest looked after the asylum seekers because ____ .",
   "The conductor noticed that the strings of the soloist's violin were ____ .",
   "The police learnt that the handbag of the diplomat's wife had been ____ .",
-  "The woman complained that the bicycles of the neighbour’s kids were ____ .",
+  "The woman complained that the bicycles of the neighbour's kids were ____ .",
   "Because of last night's TV documentary, the old lady ____ .",
   "The patient had to wait for quite some time before ____ .",
   "The captain recalled that sails of the pirates' ship were ____ .",
