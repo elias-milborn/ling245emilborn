@@ -71,7 +71,7 @@ for (i = 0; i < 24; i++) {
   if (i < 9) {
     to_string = "0" + to_string
   }
-  var equation = "filler" + to_string + ".png"
+  var equation = "Filler" + to_string + ".png"
   var sentence = filler_sentences[i]
   all_stims.push({"prime" : equation, "target" : sentence, "answer" : "filler"})
 }
